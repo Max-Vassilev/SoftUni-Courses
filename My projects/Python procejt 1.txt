@@ -1,0 +1,43 @@
+import random
+
+questions = ['Кога е основана България?', 'Колко е 6 * 6', 'Коя е столицата на Гърция?']
+answered_questions = []
+correct_answers_counter = 0
+
+for i in range (10):
+    current_question = random.choice(questions)
+    if current_question not in answered_questions:
+        answered_questions.append(current_question)
+        print(current_question)
+    else:
+        continue
+    if current_question == 'Кога е основана България?':
+        answer = input('Enter your answer: ')
+        if answer == '681':
+            print('Correct answer!\n')
+            correct_answers_counter += 1
+        else:
+            print('Wrong answer.\n')
+    elif current_question == 'Колко е 6 * 6':
+        answer = input('Enter your answer: ')
+        if answer == '36':
+            print('Correct answer!\n')
+            correct_answers_counter += 1
+        else:
+            print('Wrong answer.\n')
+    elif current_question == 'Коя е столицата на Гърция?':
+        answer = input('Enter your answer: ')
+        if answer == 'Атина':
+            print('Correct answer!\n')
+            correct_answers_counter += 1
+        else:
+            print('Wrong answer.\n')
+if correct_answers_counter == 3:
+    print('Winner! No wrong answers!')
+else:
+    print(f'Loser! Only {correct_answers_counter} correct answers. ')
+
+
+
+# :)
+
